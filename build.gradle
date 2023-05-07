@@ -5,12 +5,30 @@ plugins {
 }
 
 group = 'com.cm'
-version = '1.0'
+version = '1.0.1'
 
 publishing {
     publications {
         myLib(MavenPublication) {
             from components.java
+            pom {
+                name = 'token-utils'
+                description = 'A simple utility library for token management'
+                url = 'https://github.com/kundanlcb/token-utils'
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://opensource.org/licenses/MIT'
+                    }
+                }
+                developers {
+                    developer {
+                        id = 'kundanlcb'
+                        name = 'Kundan'
+                        email = 'kundanlcb@gmail.com'
+                    }
+                }
+            }
         }
     }
     repositories {
